@@ -16,6 +16,7 @@ Have you ever wanted an easy way to take an exam study guide and quickly turn it
   - [Taking an Exam](#taking-an-exam)
   - [Reviewing Results](#reviewing-results)
   - [Theming](#theming)
+- [Creating Exams](#creating-exams)
 - [Service Worker & Offline Support](#service-worker--offline-support)
 - [Storage](#storage)
 - [Customization](#customization)
