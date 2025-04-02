@@ -9,6 +9,7 @@ Have you ever wanted an easy way to take an exam study guide and quickly turn it
 ## Table of Contents
 
 - [Installation & Setup](#installation--setup)
+  -  [Android](#android)
   -  [IOS](#ios)
 - [Usage](#usage)
   - [Uploading an Exam](#uploading-an-exam)
@@ -24,13 +25,22 @@ Have you ever wanted an easy way to take an exam study guide and quickly turn it
 
 ## Installation & Setup
 
+### Android
+Instructions for installing MDXam on Google Android devices:
+- Visit [MDXam here on GitHub Pages](https://msalty.github.io/mdxam/)
+  - Modern versions of Android may pop up an "Install" button immediately
+- Click on the KEBAB MENU in the upper-right of mobile Chrome
+- Select "Add to home screen"
+- Choose the "Install" option.  It will work like a normal Android app even offline.
+![IOS Installation](/images/mdxam-install-android.jpg)
+
 ### IOS
 Instructions for installing on Apple iPhone and Apple iPad:
 - Visit [MDXam here on GitHub Pages](https://msalty.github.io/mdxam/) 
 - Click on the SHARE button at the bottom of mobile Safari
 - Select "Add to Home Screen"
 - Select "Add" on follow up page to install to your iPhone.  It will work like a normal app even when offline.
-![IOS Installation](/images/mdxam-install-ios.png)
+![IOS Installation](/images/mdxam-install-ios.jpg)
 
 ## Usage
 
