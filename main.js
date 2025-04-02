@@ -968,7 +968,7 @@ async function renderCachedExams() {
   var examList = document.getElementById('examList');
   examList.innerHTML = "";
   if (cachedExams.length === 0) {
-    examList.innerHTML = "<p>No cached exams found. Please upload an exam using the ➕ <a href=\"#\" onclick=\"renderAddExam(); return false;\">Add Exam</a> option.</p><p>For more information on the usage of MDXam, please refer to the <a href=\"https://github.com/msalty/mdxam\">documentation</a>.;
+    examList.innerHTML = "<p>No cached exams found. Please upload an exam using the ➕ <a href=\"#\" onclick=\"renderAddExam(); return false;\">Add Exam</a> option.</p><p>For more information on the usage of MDXam, please refer to the <a href=\"https://github.com/msalty/mdxam\">documentation</a>.";
     return;
   }
   
