@@ -1,4 +1,4 @@
-# MDXam - Markdown Exam Simulator
+# ![MDXam](/images/mdxam-icon64.jpg) MDXam - Markdown Exam Simulator
 
 Have you ever wanted an easy way to take an exam study guide and quickly turn it into flash cards or an exam simulation?  Better yet, what if you could create those study guides with a simple text editor?  That is the fundamental goal of [MDXam](https://msalty.github.io/mdxam/) (<ins>**M**</ins>ark<ins>**d**</ins>own e<ins>**Xam**</ins>).  
 
@@ -32,7 +32,7 @@ Instructions for installing MDXam on Google Android devices:
 - Click on the KEBAB MENU in the upper-right of mobile Chrome
 - Select "Add to home screen"
 - Choose the "Install" option.  It will work like a normal Android app even offline.
-![IOS Installation](/images/mdxam-install-android.jpg)
+![Android Installation](/images/mdxam-install-android.jpg)
 
 ### IOS
 Instructions for installing on Apple iPhone and Apple iPad:
@@ -41,6 +41,16 @@ Instructions for installing on Apple iPhone and Apple iPad:
 - Select "Add to Home Screen"
 - Select "Add" on follow up page to install to your iPhone.  It will work like a normal app even when offline.
 ![IOS Installation](/images/mdxam-install-ios.jpg)
+
+### Desktop
+
+#### Google Chrome
+Instructions for installing on desktop via Chrome (also works on ChromeOS):
+- Visit [MDXam here on GitHub Pages](https://msalty.github.io/mdxam/)
+- In the Chrome Search Bar ("Omnibox") you should see an install icon
+- Click on it and choose the "Install" option and it will be installed as an app on your machine
+![Chrome Installation](/images/mdxam-install-chrome.jpg)
+
 
 ## Usage
 
