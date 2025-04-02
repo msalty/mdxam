@@ -7,7 +7,7 @@ Have you ever wanted an easy way to take an exam study guide and quickly turn it
 ## Table of Contents
 
 - [Installation & Setup](#installation--setup)
-  -  [IOS]
+  -  [IOS]{#ios)
 - [Usage](#usage)
   - [Uploading an Exam](#uploading-an-exam)
   - [Taking an Exam](#taking-an-exam)
@@ -22,7 +22,8 @@ Have you ever wanted an easy way to take an exam study guide and quickly turn it
 
 ## Installation & Setup
 
-### IOS (iPhone, iPad)
+### IOS
+Instructions for installing on Apple iPhone and Apple iPad:
 - Visit [MDXam here on GitHub Pages](https://msalty.github.io/mdxam/) 
 - Click on the SHARE button at the bottom of mobile Safari
 - Select "Add to Home Screen"
