@@ -4,6 +4,8 @@ Have you ever wanted an easy way to take an exam study guide and quickly turn it
 
 [MDXam](https://msalty.github.io/mdxam/) is a mobile-first exam simulation application.  Don't let "mobile-first" scare you off - it works great as a lean app on any modern desktop OS as well. It will allow you to upload, take, and review exams written in [Markdown](https://www.markdownguide.org) syntax (so... text-based, DRM-free, unecrypted, and fully create and controled by you). The application is designed to work easily and offline using browser-based storage. It offers customizable themes, real-time exam simulation with progress tracking, randomized questions and answers, and detailed result review on missed questions with charts to review progress.
 
+<a href="https://www.buymeacoffee.com/msalty" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
+
 ## Table of Contents
 
 - [Installation & Setup](#installation--setup)
