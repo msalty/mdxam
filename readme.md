@@ -87,6 +87,53 @@ Instructions for installing on desktop via Chrome (also works on ChromeOS):
 3. The top nav bar, left nav bar, main content, and even the body background will update to match the chosen theme.
 4. The selected theme is stored and applied on subsequent visits.
 
+## Creating Exams
+
+Making the exams both easy to create and human-readable was of paramount importance to this project.  I wanted an exam I could load into a markdown editor and modify as needed in a format that was both universal and durable.
+
+### Exam Format
+
+The below exam can be copy and pasted into a text file with the `.md` (markdown) extension and uploaded to MDXam.
+
+```
+# Name of Example Exam Displayed in MDXam UI
+
+## This is question number 1 on the exam.  This is an example of a question with a single response.
+- [ ] response 1 (incorrect)
+- [x] response 2 (correct - note the X)
+- [ ] response 3 (incorrect)
+- [ ] response 4 (also incorrect)
+Anything below the responses can be used for reference material, urls, etc related to the question.
+
+## This is question number 2 on the exam and an example of how to create a question with multiple answers (choose 3)
+- [x] response 1 (correct - note the X)
+- [x] response 2 (correct)
+- [ ] response 3 (incorrect)
+- [x] response 4 (correct)
+- [ ] response 5 (incorrect)
+Reference material for question 2 would go here.
+```
+
+When viewed in a proper Markdown editing tool (such as [Obsidian](https://obsidian.md)), the exams should be very easy to both read and print.  
+
+INSERT IMAGE OF RENDERED EXAM 
+
+### Including Images and HTML Tags in Exam Files
+
+To make the format more flexible, you can include images (as many as you want) in each question along with html tag elements.  Below is an example question that contains an image and an HTML tag.
+
+```
+## What color is a banana? </br> ![[banana.jpg]]
+- [ ] Red
+- [x] Yellow
+- [ ] Blue 
+- [ ] Purple 
+```
+
+You will need to upload both the exam `.md` file and images files with names that match those included in the exam questions (e.g. `banana.jpg` in the above example). The questions will be rendered with the image included.
+
+INSERT IMAGE OF RENDERED QUESTION ABOVE
+
 ## Service Worker & Offline Support
 
 - **Installation:**  
