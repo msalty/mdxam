@@ -1,0 +1,21 @@
+{
+  "name": "MDXam",
+  "short_name": "MDXam",
+  "description": "A Markdown-based exam simulator.",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#2f3e46",
+  "theme_color": "#2f3e46",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

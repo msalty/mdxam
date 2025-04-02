@@ -1,0 +1,271 @@
+/* style.css */
+
+/* ----------------------------
+   Global Styles
+----------------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f2f5;
+  color: #333;
+}
+
+/* Set global font size
+* {
+  font-size: 14px;
+}
+*/
+
+/* ----------------------------
+   Top Navigation Bar
+----------------------------- */
+#topNavbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+  /* background-color: #2f3e46; /* Very dark gray-blue */
+  background-color: #1b263b; /* Very dark gray-blue */
+  border-bottom: 1px solid #ccc; /* Subtle border */
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  z-index: 1000;
+  backdrop-filter: blur(10px);             /* Blur effect */
+  -webkit-backdrop-filter: blur(10px);       /* For Safari */
+}
+
+.navbar-brand {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-brand:hover {
+  color: #fff;
+}
+
+/* Hamburger button styles */
+.navbar-toggler {
+  background: none;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.nav-item {
+  color: #fff;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem;
+  width: 180px;
+}
+
+.nav-item:hover {
+  background-color: var(--top-nav-color);
+  border-right: 1px solid #ccc; /* Subtle right border */
+}
+
+/* ----------------------------
+   Left Sidebar (Navigation)
+----------------------------- */
+.sidebar {
+  position: fixed;
+  top: 40px;              /* Start just below the top nav bar */
+  left: 0;
+  width: 180px;           /* Fixed width */
+  height: calc(100vh - 40px);
+  background-color: #415a77; /* Match top nav color */
+  border-right: 1px solid #ccc; /* Subtle right border */
+  /* padding: 1rem; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Top items at top; Settings fixed at bottom */
+  transition: transform 0.3s ease;
+  z-index: 900;
+}
+
+/* When the sidebar is hidden, slide it off-screen */
+.sidebar.hidden {
+  transform: translateX(-220px);
+}
+
+/* Ensure the nav link takes up full width and has padding */
+.sidebar .nav-link {
+  display: block;
+  color: #fff;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+/* Optional: Prevent the link content (icon + text) from wrapping */
+.sidebar .nav-link span, .sidebar .nav-link img {
+  vertical-align: middle;
+}
+
+/* ----------------------------
+   Main Content Area
+----------------------------- */
+.content {
+  margin-top: 40px;       /* Below the top nav bar */
+  margin-left: 180px;      /* Offset by the sidebar width */
+  padding: 1rem;
+  /* max-width: 1800px;    if you want a max width */
+  transition: margin-left 0.3s ease;
+}
+
+/* When the sidebar is hidden, remove the left margin so content uses full width */
+.content.full-width {
+  margin-left: 0;
+}
+
+.btn-primary {
+  margin-bottom: 1rem;
+}
+
+/* ----------------------------
+   Card Styling (for content items)
+----------------------------- */
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.exam-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  margin-bottom: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding = "0.5rem";
+}
+
+/* ----------------------------
+   Responsive (Mobile) Adjustments
+----------------------------- */
+/* Hide sidebar by default on small screens */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 40px;              /* Start just below the top nav bar */
+    left: 0;
+    height: 100%;
+    transform: translateX(-100%);
+    z-index: 2000;
+  }
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
+  /* Ensure the content covers full width on mobile */
+  .content {
+    margin-left: 0;
+  }
+}
+
+
+/* ----------------------------
+   Flat Appearance (Remove Shadows)
+----------------------------- */
+/* Remove shadows from nav bars */
+.navbar, .sidebar {
+  box-shadow: none;
+}
+
+/* Restart Exam button fixed at the bottom */
+#restartExamButton {
+  position: fixed;
+  bottom: 1rem;
+  /* left: 0; */
+  right: 2rem;
+  margin: 1rem auto;
+  width: fit-content;
+  z-index: 1000;
+  box-shadow: 15px;
+}
+
+/* ----------------------------
+   Results Area
+----------------------------- */
+.chart-container {
+  width: 100%;
+  max-height: 250px;
+  overflow: hidden; /* or auto if you want scrollbars */
+  box-sizing: border-box;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: var(--bs-body-bg);
+}
+
+.exam-results-container table {
+  font-size: 0.7rem; /* Adjust as needed, e.g., 14px */
+}
+
+.results-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.results-details.open {
+  max-height: 1000px; /* Adjust this value to a size that fits your content */
+}
+
+/* ----------------------------
+   Exam Progress Bar Styling
+----------------------------- */
+.progress-container {
+  position: relative;
+}
+
+.progress {
+  background-color: hwb(0 44% 56%);  /* Darker unfilled portion */
+  height: 1.5rem;          /* Adjust as needed */
+  border-radius: 0.25rem;
+  overflow: hidden;
+  border-style:solid;
+  border-color:#777;
+  border-width:1px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar {
+  background-color: #0d6efd; /* Your fill color */
+  height: 100%;
+  transition: width 0.3s ease;
+}
+
+.progress-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-weight: bold;
+  pointer-events: none;  /* So clicks go through to the progress bar if needed */
+}
+
+/* ----------------------------
+   (Optional) Dark Mode Overrides
+----------------------------- */
+/* (If you implement a dark mode toggle, you can add additional overrides here.
+   Since our nav and sidebar already use dark colors, further dark mode adjustments
+   may not be necessary unless you wish to change the color palette.)
+*/
