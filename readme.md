@@ -1,6 +1,6 @@
 # MDXam - Markdown Exam Simulator PWA
 
-MDXam is a Progressive Web Application (PWA) that allows users to upload, take, and review exams written in Markdown. The application is designed to work offline, using a Service Worker for caching and IndexedDB for persistent storage. It offers customizable themes, real-time exam simulation with progress tracking, randomized questions and answers, and detailed result review with charts.
+MDXam is a mobile-first application that allows users to upload, take, and review exams written in Markdown language. The application is designed to work offline, using browser-based cache. It offers customizable themes, real-time exam simulation with progress tracking, randomized questions and answers, and detailed result review on missed questions with charts.
 
 ## Table of Contents
 
