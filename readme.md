@@ -7,7 +7,7 @@ Have you ever wanted an easy way to take an exam study guide and quickly turn it
 ## Table of Contents
 
 - [Installation & Setup](#installation--setup)
-  -  [IOS]{#ios)
+  -  [IOS](#ios)
 - [Usage](#usage)
   - [Uploading an Exam](#uploading-an-exam)
   - [Taking an Exam](#taking-an-exam)
