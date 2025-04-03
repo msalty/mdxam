@@ -159,9 +159,6 @@ You will need to upload both the exam `.md` file and images files with names tha
 - **Exam Results:**  
   Results are stored in IndexedDB under the `examResults` object store, with each record using an inline key (`examId`) and an array of result attempts.
 
-- **Quota:**  
-  IndexedDB has a much larger quota than localStorage, making it suitable for storing larger files (including images).
-
 ## Customization
 
 - **Randomization:**  
@@ -169,7 +166,7 @@ You will need to upload both the exam `.md` file and images files with names tha
 - **Styling:**  
   You can modify `style.css` to change the appearance of the navigation bars, progress bars, and other UI elements.
 - **Themes:**  
-  Edit the `applyTheme()` function in `main.js` to add more themes or modify the existing color schemes.
+  Edit the `applyTheme()` function in `main.js` to add more themes or modify the existing color schemes.  Note that you'd need to self-host to do this.
 
 ## Features
 
@@ -184,11 +181,10 @@ You will need to upload both the exam `.md` file and images files with names tha
 - **Exam Simulation:**  
   - A progress bar tracks the exam’s progress.
   - Navigation buttons allow users to move between questions.
-  - The progress bar displays text over the entire bar regardless of fill.
 
 - **Results & Review:**  
   - Exam results (score, date, attempt details) are stored in IndexedDB.
-  - A results view displays a chart (using Chart.js) of past attempts.
+  - A results view displays a chart of past attempts.  This is visible under the "Results" section.
   - Users can review each exam attempt, with incorrect questions highlighted.
   - A header for each exam in the Results view mimics the styling of the Exams page, including “Open” and “Delete All Results” controls.
   - Exams in both the Exams and Results views are alphabetized.
