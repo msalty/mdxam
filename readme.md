@@ -6,6 +6,8 @@ Have you ever wanted an easy way to take an exam study guide and quickly turn it
 
 <a href="https://www.buymeacoffee.com/msalty" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
+![MDXam Screenshots](images/mdxam-screenshots.jpg)
+
 ## Table of Contents
 
 - [Installation & Setup](#installation--setup)
