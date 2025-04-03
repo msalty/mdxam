@@ -62,22 +62,23 @@ Instructions for installing on desktop via Chrome (also works on ChromeOS):
 ### Uploading an Exam
 
 1. Navigate to the **Add Exam** section via the left navigation bar.
-2. Select your exam file (a Markdown file) along with any associated image files.
+2. Select your exam file (a Markdown file) along with any associated image files (shift select / option select / select all for multiple files if including a bunch of images).
 3. The app processes the Markdown, converting custom image syntax to embedded images (using data URLs).
 4. After upload, you see a confirmation and are automatically redirected to the **Exams** list.
 
 ### Taking an Exam
 
-1. On the **Exams** page, click on an exam to open it.
+1. On the **Exams** page, click the "Open" button on an exam to open it.
 2. The exam simulation begins:
    - Questions are presented in a randomized order.
    - Answer choices are also randomized.
    - A progress bar at the top shows your progress, with the current question number centered over the entire bar.
 3. You can navigate between questions using **Previous** and **Next** buttons, then **Submit Exam** when finished.
+4. You may delete an exam by hitting the "Delete" button next to it (the red "X")
 
 ### Reviewing Results
 
-1. After submitting an exam, your results (score, date, attempt details) are stored in IndexedDB.
+1. After submitting an exam, your results (score, date, attempt details) are stored.
 2. Navigate to the **Results** section to view a summary:
    - Each exam’s results are displayed with a header styled like the Exams page (including exam name, an "Open" button, and delete controls).
    - A chart shows your exam score over multiple attempts.
