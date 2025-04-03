@@ -17,6 +17,8 @@ Have you ever wanted an easy way to take an exam study guide and quickly turn it
   - [Reviewing Results](#reviewing-results)
   - [Theming](#theming)
 - [Creating Exams](#creating-exams)
+  -  [Exam Format](#exam-format)
+  -  [Including Images and HTML Tags in Exam Files](#including-images-and-html-tags-in-exam-files)
 - [Service Worker & Offline Support](#service-worker--offline-support)
 - [Storage](#storage)
 - [Customization](#customization)
@@ -117,7 +119,7 @@ Reference material for question 2 would go here.
 
 When viewed in a proper Markdown editing tool (such as [Obsidian](https://obsidian.md)), the exams should be very easy to both read and print.  
 
-INSERT IMAGE OF RENDERED EXAM 
+![Rendered Exam](images/mdxam-exam-formant-rendered.jpg)
 
 ### Including Images and HTML Tags in Exam Files
 
@@ -133,7 +135,7 @@ To make the format more flexible, you can include images (as many as you want) i
 
 You will need to upload both the exam `.md` file and images files with names that match those included in the exam questions (e.g. `banana.jpg` in the above example). The questions will be rendered with the image included.
 
-INSERT IMAGE OF RENDERED QUESTION ABOVE
+![Exam question with images and HTML Rendered in MDXam](images/mdxam-exam-formant-imageshtml.jpg)
 
 ## Service Worker & Offline Support
 
