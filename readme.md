@@ -11,6 +11,8 @@ Have you ever wanted an easy way to take an exam study guide and quickly turn it
 - [Installation & Setup](#installation--setup)
   -  [Android](#android)
   -  [IOS](#ios)
+  -  [Desktop](#desktop)
+    - [Google Chrome](#google-chrome) 
 - [Usage](#usage)
   - [Uploading an Exam](#uploading-an-exam)
   - [Taking an Exam](#taking-an-exam)
