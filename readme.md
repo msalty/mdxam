@@ -21,6 +21,7 @@ Have you ever wanted an easy way to take an exam study guide and quickly turn it
 - [Creating Exams](#creating-exams)
   -  [Exam Format](#exam-format)
   -  [Including Images and HTML Tags in Exam Files](#including-images-and-html-tags-in-exam-files)
+  -  [Example Exam File](#example-exam-file)
 - [Service Worker & Offline Support](#service-worker--offline-support)
 - [Storage](#storage)
 - [Customization](#customization)
@@ -139,6 +140,12 @@ To make the format more flexible, you can include images (as many as you want) i
 You will need to upload both the exam `.md` file and images files with names that match those included in the exam questions (e.g. `banana.jpg` in the above example). The questions will be rendered with the image included.
 
 ![Exam question with images and HTML Rendered in MDXam](images/mdxam-exam-formant-imageshtml.jpg)
+
+### Example Exam File
+
+You can find an example exam file to load and test [here in this GitHub Repo](https://github.com/msalty/mdxam/blob/main/Example%20Exam/MDXam%20Example%20Exam.md).  
+
+Please note that this is using standard <img> refrences, so the images will not cache and work offline as they would in the example above.  This is provided to give you an idea of what the exams look like when they are created and to give an example of the syntax used to create these exam files.
 
 ## Service Worker & Offline Support
 
