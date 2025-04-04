@@ -64,10 +64,19 @@ Instructions for installing on desktop via Chrome (also works on ChromeOS):
 
 ### Uploading an Exam
 
+To upload an exam using local files:
 1. Navigate to the **Add Exam** section via the left navigation bar.
 2. Select your exam file (a Markdown file) along with any associated image files (shift select / option select / select all for multiple files if including a bunch of images).
 3. The app processes the Markdown, converting custom image syntax to embedded images (using data URLs).
 4. After upload, you see a confirmation and are automatically redirected to the **Exams** list.
+
+You can optionally upload an exam from a web URL.
+1. Navigate to the **Add Exam** section via the left navigation bar.
+2. Paste the full URL into the URL entry field.
+3. Press the "Load Exam from URL" button.
+4. After upload, you see a confirmation and are automatically redirected to the **Exams** list.
+
+(You can use the URL of the example exam as a test: https://raw.githubusercontent.com/msalty/mdxam/refs/heads/main/Example%20Exam/MDXam%20Example%20Exam.md)
 
 ### Taking an Exam
 
