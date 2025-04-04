@@ -1126,24 +1126,11 @@ async function loadExamFromURL(url) {
       throw new Error('Failed to fetch exam markdown: ' + response.statusText);
     }
     const examText = await response.text();
-    // Parse the exam text
-    examData = parseExamMarkdown(examText);
-    // Assign a unique exam ID (if not loaded from cache)
-    examData.examId = Date.now();
-    
-    // Randomize questions and choices if desired
-    examData.questions = shuffle(examData.questions);
-    examData.questions.forEach(function(question) {
-      question.choices = shuffle(question.choices);
-    });
-    
-    currentQuestionIndex = 0;
-    userAnswers = {};
-    if (examData.time) {
-      startTimer(examData.time);
-    }
-    // Start the exam simulation
-    renderExamSimulation();
+    // Save the exam into cache (IndexedDB or localStorage, as implemented)
+    await saveExamToCache(examText);
+    alert("Exam loaded from URL and cached!");
+    // Navigate back to the Exams list so the user can launch it as usual.
+    renderExamList();
   } catch (err) {
     console.error("Error loading exam from URL:", err);
     alert("Failed to load exam: " + err.message);
