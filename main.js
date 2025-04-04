@@ -1028,15 +1028,18 @@ function renderAddExam() {
         <label for="examFiles" class="form-label">
           Upload Exam Markdown File (*.md) and Related Images
         </label>
-        <!-- Allow multiple files: the markdown file plus image files -->
         <input type="file" id="examFiles" class="form-control" multiple>
       </div>
       <button type="submit" class="btn btn-primary">Upload</button>
     </form>
+    <div id="urlLoader" class="mt-3">
+      <label for="examURL" class="form-label">Or paste Exam URL:</label>
+      <input type="url" id="examURL" class="form-control" placeholder="https://example.com/exam.md">
+      <button id="loadExamBtn" class="btn btn-secondary mt-2">Load Exam from URL</button>
+    </div>
   `;
-  //         Removed line above
-  //         <input type="file" id="examFiles" class="form-control" accept=".md,image/*" multiple>
 
+  // File upload event listener.
   var form = document.getElementById('examUploadForm');
   form.addEventListener('submit', function(e) {
     e.preventDefault();
@@ -1047,7 +1050,7 @@ function renderAddExam() {
       return;
     }
     
-    // Identify the Markdown file (by extension) and the image files.
+    // Identify the Markdown file (by extension) and image files.
     var mdFile = files.find(file => file.name.toLowerCase().endsWith('.md'));
     if (!mdFile) {
       alert("Please include a Markdown (.md) file.");
@@ -1060,7 +1063,6 @@ function renderAddExam() {
       return new Promise((resolve, reject) => {
         var reader = new FileReader();
         reader.onload = function(e) {
-          // Resolve with an object mapping filename to data URL.
           resolve({ name: file.name, dataUrl: e.target.result });
         };
         reader.onerror = function(e) {
@@ -1081,12 +1083,12 @@ function renderAddExam() {
       var mdReader = new FileReader();
       mdReader.onload = function(e) {
         var examText = e.target.result;
-        // Replace our custom image syntax ![[filename]] with an <img> tag using the data URL.
+        // Replace custom image syntax ![[filename]] with an <img> tag using the data URL.
         examText = examText.replace(/!\[\[([^\]]+)\]\]/g, function(match, filename) {
           if (imageMap[filename]) {
             return '<br><img src="' + imageMap[filename] + '" alt="Question Image" style="max-width:100%; margin-top:1rem;">';
           }
-          return match; // If no matching image, leave unchanged.
+          return match;
         });
         
         // Save the processed exam text.
@@ -1100,6 +1102,52 @@ function renderAddExam() {
       alert("Error processing image files.");
     });
   });
+
+  // URL loader event listener.
+  var loadExamBtn = document.getElementById('loadExamBtn');
+  loadExamBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    var url = document.getElementById('examURL').value;
+    if (url) {
+      loadExamFromURL(url);
+    } else {
+      alert("Please enter a valid URL.");
+    }
+  });
+}
+
+///////////////////
+// Load Exam from URL Function - added 2025-04-04
+///////////////////
+async function loadExamFromURL(url) {
+  try {
+    const response = await fetch(url);
+    if (!response.ok) {
+      throw new Error('Failed to fetch exam markdown: ' + response.statusText);
+    }
+    const examText = await response.text();
+    // Parse the exam text
+    examData = parseExamMarkdown(examText);
+    // Assign a unique exam ID (if not loaded from cache)
+    examData.examId = Date.now();
+    
+    // Randomize questions and choices if desired
+    examData.questions = shuffle(examData.questions);
+    examData.questions.forEach(function(question) {
+      question.choices = shuffle(question.choices);
+    });
+    
+    currentQuestionIndex = 0;
+    userAnswers = {};
+    if (examData.time) {
+      startTimer(examData.time);
+    }
+    // Start the exam simulation
+    renderExamSimulation();
+  } catch (err) {
+    console.error("Error loading exam from URL:", err);
+    alert("Failed to load exam: " + err.message);
+  }
 }
 
 ///////////////////
