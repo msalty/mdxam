@@ -156,7 +156,7 @@ You will need to upload both the exam `.md` file and images files with names tha
 
 You can find an example exam file to load and test [here in this GitHub Repo](https://github.com/msalty/mdxam/blob/main/Example%20Exam/MDXam%20Example%20Exam.md).  
 
-Please note that this is using standard <img> refrences, so the images will not cache and work offline as they would in the example above.  This is provided to give you an idea of what the exams look like when they are created and to give an example of the syntax used to create these exam files.
+Please note that this is using standard <img> refrences, so the images will only cache if you have viewed the relevant question while online (which allows them to load and cache).  This is provided to give you an idea of what the exams look like when they are created and to give an example of the syntax used to create these exam files.
 
 ## Service Worker & Offline Support
 
