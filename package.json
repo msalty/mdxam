@@ -1,0 +1,14 @@
+{
+  "name": "mdxam",
+  "version": "2.4.0",
+  "private": true,
+  "type": "module",
+  "description": "A dependency-free, offline-first Markdown practice exam app.",
+  "scripts": {
+    "test": "node --test",
+    "check": "node --check main.js && node --check sw.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
