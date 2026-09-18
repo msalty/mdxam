@@ -1,6 +1,6 @@
 {
   "name": "mdxam",
-  "version": "2.4.0",
+  "version": "2.4.1",
   "private": true,
   "type": "module",
   "description": "A dependency-free, offline-first Markdown practice exam app.",

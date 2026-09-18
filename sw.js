@@ -1,5 +1,5 @@
 // Bump this release value whenever an app-shell file changes.
-const VERSION = 'mdxam-v2.4.0';
+const VERSION = 'mdxam-v2.4.1';
 const APP_CACHE = `${VERSION}-app`;
 const RUNTIME_CACHE = `${VERSION}-runtime`;
 const APP_SHELL = [
